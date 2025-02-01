@@ -21,47 +21,47 @@ var optsFileIn = srcDirXml + "\\include\\libxml\\xmlversion.h.in";
 var optsFile = srcDirXml + "\\include\\libxml\\xmlversion.h";
 /* Version strings for the binary distribution. Will be filled later 
    in the code. */
-var verMajor;
-var verMinor;
-var verMicro;
+var verMajor  = 2;
+var verMinor = 14;
+var verMicro = 0;
 var verMicroSuffix;
 var verCvs;
 var useCvsVer = true;
 /* Libxml features. */
 var withThreads = "native";
-var withHttp = true;
-var withHtml = true;
-var withC14n = true;
-var withCatalog = true;
-var withXpath = true;
-var withXptr = true;
-var withXinclude = true;
-var withIconv = true;
+var withHttp = false;
+var withHtml = false;
+var withC14n = false;
+var withCatalog = false;
+var withXpath = false;
+var withXptr = false;
+var withXinclude = false;
+var withIconv = false;
 var withIcu = false;
 var withIso8859x = false;
 var withZlib = false;
 var withLzma = false;
-var withDebug = true;
-var withSchemas = true;
-var withSchematron = true;
-var withRegExps = true;
-var withModules = true;
+var withDebug = false;
+var withSchemas = false;
+var withSchematron = false;
+var withRegExps = false;
+var withModules = false;
 var withTree = true;
 var withReader = true;
 var withWriter = true;
-var withWalker = true;
-var withPattern = true;
-var withPush = true;
-var withValid = true;
-var withSax1 = true;
-var withLegacy = true;
+var withWalker = false;
+var withPattern = false;
+var withPush = false;
+var withValid = false;
+var withSax1 = false;
+var withLegacy = false;
 var withOutput = true;
 var withPython = false;
 /* Win32 build options. */
 var dirSep = "\\";
 var compiler = "msvc";
 var cruntime = "/MD";
-var dynruntime = true;
+var dynruntime = false;
 var vcmanifest = false;
 var buildDebug = 0;
 var buildStatic = 0;
@@ -194,11 +194,15 @@ function discoverVersion()
 			vf.WriteLine("LIBXML_MICRO_VERSION=" + m[1]);
 			verMicro = m[1];
 		} else if(s.search(/^LIBXML_MICRO_VERSION_SUFFIX=/) != -1) {
+			vf.WriteLine("LIBXML_MAJOR_VERSION=" + "2");
+			vf.WriteLine("LIBXML_MINOR_VERSION=" + "14");
+			vf.WriteLine("LIBXML_MICRO_VERSION=" + "0");
 			vf.WriteLine(s);
 			verMicroSuffix = s.substring(s.indexOf("=") + 1, s.length);
 		}
 	}
 	cf.Close();
+
 	vf.WriteLine("XML_SRCDIR=" + srcDirXml);
 	vf.WriteLine("UTILS_SRCDIR=" + srcDirUtils);
 	vf.WriteLine("WITH_THREADS=" + withThreads);
