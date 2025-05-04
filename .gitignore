@@ -33,6 +33,9 @@
 /libxml-2.0.pc
 /libxml2-config.cmake
 /xml2-config
+/win32/*/*.obj
+.vs/*/**
+*.lib
 
 # Autotools
 .deps

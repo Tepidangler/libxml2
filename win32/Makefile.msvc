@@ -123,7 +123,6 @@ XML_OBJS = $(XML_INTDIR)\buf.obj\
 	$(XML_INTDIR)\pattern.obj\
 	$(XML_INTDIR)\relaxng.obj\
 	$(XML_INTDIR)\SAX2.obj\
-	$(XML_INTDIR)\SAX.obj\
 	$(XML_INTDIR)\schematron.obj\
 	$(XML_INTDIR)\threads.obj\
 	$(XML_INTDIR)\tree.obj\
@@ -167,7 +166,6 @@ XML_OBJS_A = $(XML_INTDIR_A)\buf.obj\
 	$(XML_INTDIR_A)\pattern.obj\
 	$(XML_INTDIR_A)\relaxng.obj\
 	$(XML_INTDIR_A)\SAX2.obj\
-	$(XML_INTDIR_A)\SAX.obj\
 	$(XML_INTDIR_A)\schematron.obj\
 	$(XML_INTDIR_A)\threads.obj\
 	$(XML_INTDIR_A)\tree.obj\
@@ -211,7 +209,6 @@ XML_OBJS_A_DLL = $(XML_INTDIR_A_DLL)\buf.obj\
 	$(XML_INTDIR_A_DLL)\pattern.obj\
 	$(XML_INTDIR_A_DLL)\relaxng.obj\
 	$(XML_INTDIR_A_DLL)\SAX2.obj\
-	$(XML_INTDIR_A_DLL)\SAX.obj\
 	$(XML_INTDIR_A_DLL)\schematron.obj\
 	$(XML_INTDIR_A_DLL)\threads.obj\
 	$(XML_INTDIR_A_DLL)\tree.obj\
